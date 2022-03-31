@@ -14,6 +14,10 @@ import java.util.List;
 
 public class ProfesseurRepository {
 
+    /**
+     *
+     */
+
     private final EntityManager manager;
 
     public ProfesseurRepository(EntityManager manager){
@@ -30,7 +34,7 @@ public class ProfesseurRepository {
     }
 
     @Transactional //pour dire que c'est Spring qui gère ça...dit qu'au début de la méthode on ouvre une transaction et à la fin
-    //on la ferme (plus de commit, rollback, etc)
+    //on la ferme (plus de commit, rollback, etc car il fait un commit auto à la fin)
     public void insert(Professeur toInsert) throws IllegalArgumentException{
 
         if(getOne(toInsert.getId()) != null)
@@ -49,7 +53,7 @@ public class ProfesseurRepository {
         return toDelete;
     }
 
-   //@Transactional
+   @Transactional
     public Professeur update(Professeur toUpdate) {
         Professeur p = getOne(toUpdate.getId());
 
@@ -58,11 +62,10 @@ public class ProfesseurRepository {
             p.setSurname(toUpdate.getSurname());
             p.setSectionId(toUpdate.getSectionId());
             p.setOffice(toUpdate.getOffice());
-            
-
-
-
+            p.setEmail(toUpdate.getEmail());
+            p.setHireDate(toUpdate.getHireDate());
+            p.setWage(toUpdate.getWage());
         }
-        return c;
+        return p;
     }
 }

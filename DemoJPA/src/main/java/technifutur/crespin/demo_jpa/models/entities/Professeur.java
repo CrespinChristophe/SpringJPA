@@ -7,6 +7,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -33,7 +35,7 @@ public class Professeur {
     @Column(name = "professor_email", length = 30)
     private String email;
     @Column(name = "professor_hire_date")
-    private Date hireDate;
+    private LocalDateTime hireDate;
     @Column(name = "professor_wage", columnDefinition = "INT(11)")
     private long wage;
 

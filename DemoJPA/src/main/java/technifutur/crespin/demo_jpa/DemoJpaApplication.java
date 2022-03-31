@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import technifutur.crespin.demo_jpa.data.CoursRepository;
 //import technifutur.crespin.demo_jpa.data.SectionDAO;
+import technifutur.crespin.demo_jpa.data.ProfesseurRepository;
 import technifutur.crespin.demo_jpa.data.SectionRepository;
 import technifutur.crespin.demo_jpa.models.entities.Cours;
 import technifutur.crespin.demo_jpa.models.entities.Section;
@@ -62,6 +63,12 @@ public class DemoJpaApplication {
 		c1.setName("nom modifié");
 		Cours coursModifie = repo.update(c1);
 		System.out.println(coursModifie);
+
+		//Professeur
+
+		ProfesseurRepository profRepo = context.getBean(ProfesseurRepository.class);
+
+
 
 
 	}
