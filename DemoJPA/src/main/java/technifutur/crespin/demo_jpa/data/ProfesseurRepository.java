@@ -49,15 +49,20 @@ public class ProfesseurRepository {
         return toDelete;
     }
 
-  /*  //@Transactional
+   //@Transactional
     public Professeur update(Professeur toUpdate) {
-        Cours c = getOne(toUpdate.getId());
+        Professeur p = getOne(toUpdate.getId());
 
-        if (c != null) {
-            c.setName(toUpdate.getName());
-            c.setEcts(toUpdate.getEcts());
-            c.setProfessorId(toUpdate.getProfessorId());
+        if (p != null) {
+            p.setName(toUpdate.getName());
+            p.setSurname(toUpdate.getSurname());
+            p.setSectionId(toUpdate.getSectionId());
+            p.setOffice(toUpdate.getOffice());
+            
+
+
+
         }
         return c;
-    }*/
+    }
 }

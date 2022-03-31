@@ -54,7 +54,7 @@ public class CoursRepository {
 
         if (c != null) {
             c.setName(toUpdate.getName());
-            c.setEcts(toUpdate.getEcts());
+
             c.setProfessorId(toUpdate.getProfessorId());
     }
         return c;
