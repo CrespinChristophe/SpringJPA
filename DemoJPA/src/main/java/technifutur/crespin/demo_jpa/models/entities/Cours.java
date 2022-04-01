@@ -25,6 +25,7 @@ public class Cours {
     private Long professorId;
 
     @ManyToOne
+//    @JoinColumn(name = "professeur_id", foreignKey = @ForeignKey(name = "FK_COURSE_PROFESSOR_ID"))
     private Professeur professeur;
 
 }
