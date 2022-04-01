@@ -41,7 +41,8 @@ public class Professeur {
     @OneToMany(mappedBy = "professeur")
     private List<Cours> course = new ArrayList<>();
 
-    @ManyToOne
+    @ManyToOne(optional = false)
+//    @JoinColumn(name = "section_id", nullable = false) ne devrait pas marcher sans ça, mais ça marche quand meme
     private Section section;
 
 }

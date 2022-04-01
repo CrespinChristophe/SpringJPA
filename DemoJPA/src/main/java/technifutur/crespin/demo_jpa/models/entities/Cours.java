@@ -21,11 +21,11 @@ public class Cours {
     private String name;
     @Column(name = "course_ects", columnDefinition = "DECIMAL(3,1)")
     private float ects;
-    @Column(columnDefinition = "INT(11)")
-    private Long professorId;
+    /*@Column(columnDefinition = "INT(11)")
+    private Long professorId;*/
 
     @ManyToOne
-//    @JoinColumn(name = "professeur_id", foreignKey = @ForeignKey(name = "FK_COURSE_PROFESSOR_ID"))
+//    @JoinColumn(name = "professor_id") ça ne devrait pas fonctionner sans ça mais ça fonctionne tout de même et on ne sait pas pourquoi
     private Professeur professeur;
 
 }
