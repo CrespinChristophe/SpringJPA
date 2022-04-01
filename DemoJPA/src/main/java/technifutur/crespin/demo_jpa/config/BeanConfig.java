@@ -3,7 +3,7 @@ package technifutur.crespin.demo_jpa.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import technifutur.crespin.demo_jpa.Boite;
-import technifutur.crespin.demo_jpa.data.SectionDAO;
+//import technifutur.crespin.demo_jpa.data.SectionDAO;
 
 import java.util.Scanner;
 import java.util.function.Predicate;

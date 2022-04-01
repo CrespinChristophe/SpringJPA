@@ -19,7 +19,7 @@ public class DemoJpaApplication {
 
 		ApplicationContext context = SpringApplication.run(DemoJpaApplication.class, args);//methode qui lance le container
 
-		SectionRepository dao = context.getBean(SectionRepository.class);
+		/*SectionRepository dao = context.getBean(SectionRepository.class);
 
 		Section section = dao.getOne(1010);
 		System.out.println(section);
@@ -66,7 +66,7 @@ public class DemoJpaApplication {
 
 		//Professeur
 
-		ProfesseurRepository profRepo = context.getBean(ProfesseurRepository.class);
+		ProfesseurRepository profRepo = context.getBean(ProfesseurRepository.class);*/
 
 
 

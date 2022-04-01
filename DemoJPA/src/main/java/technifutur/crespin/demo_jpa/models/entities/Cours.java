@@ -2,10 +2,7 @@ package technifutur.crespin.demo_jpa.models.entities;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -26,5 +23,8 @@ public class Cours {
     private float ects;
     @Column(columnDefinition = "INT(11)")
     private Long professorId;
+
+    @ManyToOne
+    private Professeur professeur;
 
 }
